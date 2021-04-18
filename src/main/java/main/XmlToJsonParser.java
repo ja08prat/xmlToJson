@@ -8,6 +8,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * This program will take a list of file paths to XML documents as a command line parameter and perform the
@@ -26,9 +27,10 @@ public class XmlToJsonParser {
         int xmlFileCounter = 0;
         for (String filePath : args) {
 
-            if (filePath.isEmpty()) {
-                System.out.println("File name cannot be blank");
-                System.exit(1);
+            Scanner sc = new Scanner(System.in);
+            while (filePath.isEmpty()) {
+                System.out.println("File name cannot be blank. Please input valid absolute file path");
+                filePath = sc.nextLine();
             }
 
             System.out.println("Parsing XML file at index " + xmlFileCounter + " to JSON. File found at: " + filePath);
