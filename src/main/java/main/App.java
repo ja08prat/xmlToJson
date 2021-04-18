@@ -1,6 +1,6 @@
 package main;
 
-import java.util.Scanner;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 /**
  * Hello world!
@@ -12,7 +12,7 @@ public class App
     {
         for (String filePath : args) {
             System.out.println(filePath);
-
+            XmlMapper mapper = new XmlMapper();
         }
 
     }
