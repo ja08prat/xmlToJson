@@ -16,7 +16,7 @@ import java.util.Scanner;
  *  1. reads the xml file from the given absolute file path
  *  2. parses xml to prettified JSON
  *  3. the prettified JSON is then parsed back to prettified XML
- *  4. The prettified JSON and re-generated XML is then printed to the terminal
+ *  4. The prettified JSON and re-generated prettified XML is then printed to the terminal
  *  5. Steps 1-4 are repeated for every file path provided as a command line param
  *
  *
